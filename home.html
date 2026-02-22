@@ -25,7 +25,8 @@
 </head>
 
 <body class="min-h-screen max-w-md mx-auto bg-[#f1e3e3]">
-    <section class="border-b-2 border-gray-300 grid grid-cols-2 justify-between items-center py-3 px-6 sticky top-0 bg-amber-100 z-10">
+    <section
+        class="border-b-2 border-gray-300 grid grid-cols-2 justify-between items-center py-3 px-6 sticky top-0 bg-amber-100 z-10">
         <div class="flex gap-1">
             <div class="w-[60px]"> <img src="./assets/logo.png" alt=""></div>
             <div>
@@ -72,24 +73,56 @@
             </button>
         </div>
     </section>
-    <section id="Cashout-container"  class="w-11/12 mx-auto pb-8 space-y-6">
-         <div>
-            <h1 class="text-2xl font-bold text-neutral/70">Cash Out</h1>
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 mt-8 mx-auto">
+    <section id="add-money" class="w-11/12 mx-auto pb-8 space-y-6">
+        <div>
+            <h1 class="text-2xl font-bold text-neutral/70">Add Money</h1>
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 mt-8 mx-auto">
+                <label class="label text-neutral font-bold">Select A Bank</label>
+                <select id="bank-name" class="select appearance-none w-full rounded-full bg-[#F4F5F7]">
+                    <option disabled selected>Select bank</option>
+                    <option value="IBBL">IBBL</option>
+                    <option value="DBBL">DBBL</option>
+                    <option value="CIty Bank">City Bank</option>
+                    <option value="Dhaka Bank">Dhaka Bank</option>
+                    <option value="Pubali Bank">Pubali Bank</option>
+                </select>
+                <label class="label text-neutral font-bold">Bank Account Number</label>
+                <input type="text" id="input-bank-acount-number" maxlength="11" minlength="11" value="01968195158"
+                    class="input rounded-full w-full bg-[#F4F5F7] " placeholder="Enter 11 digit account number" />
+                <label class="label text-neutral font-bold">Amount To Add</label>
+                <input type="text" id="input-bank-amount" class="input rounded-full w-full bg-[#F4F5F7] " value="5453"
+                    placeholder="Enter amount to Add" />
 
-            <label class="label text-neutral font-bold">Agent Number</label>
-            <input type="text" id="input-cashout" maxlength="11" minlength="11" value="01968195158" class="input rounded-full w-full bg-[#F4F5F7] " placeholder="Enter 11 digit number" />
-            <label class="label text-neutral font-bold">Amount</label>
-            <input type="text" id="input-amount" class="input rounded-full w-full bg-[#F4F5F7] " value="5453" placeholder="Enter amount to withdraw" />
+                <label class="label text-neutral font-bold mt-4">Pin Number</label>
+                <input type="password" id="input-pin" maxlength="4" minlength="4"
+                    class="input rounded-full w-full bg-[#F4F5F7]" placeholder="Enter 4 Digit pin" />
 
-            <label class="label text-neutral font-bold mt-4">Pin Number</label>
-            <input type="password" id="input-pin" maxlength="4" minlength="4" class="input rounded-full w-full bg-[#F4F5F7]" placeholder="Enter 4 Digit pin" />
-
-            <button id="cashout-btn" class="btn btn-primary rounded-full mt-4 ">Withdraw Money</button>
-        </fieldset>
-    </div>
+                <button id="add-money-btn" class="btn btn-primary rounded-full mt-4 ">Add Money</button>
+            </fieldset>
+        </div>
     </section>
-    <script src="./Script/login.js"></script>
+    <section id="Cashout-container" class="w-11/12 mx-auto pb-8 space-y-6">
+        <div>
+            <h1 class="text-2xl font-bold text-neutral/70">Cash Out</h1>
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 mt-8 mx-auto">
+
+                <label class="label text-neutral font-bold">Agent Number</label>
+                <input type="text" id="input-cashout" maxlength="11" minlength="11" value="01968195158"
+                    class="input rounded-full w-full bg-[#F4F5F7] " placeholder="Enter 11 digit number" />
+                <label class="label text-neutral font-bold">Amount</label>
+                <input type="text" id="input-amount" class="input rounded-full w-full bg-[#F4F5F7] " value="5453"
+                    placeholder="Enter amount to withdraw" />
+
+                <label class="label text-neutral font-bold mt-4">Pin Number</label>
+                <input type="password" id="input-pin" maxlength="4" minlength="4"
+                    class="input rounded-full w-full bg-[#F4F5F7]" placeholder="Enter 4 Digit pin" />
+
+                <button id="cashout-btn" class="btn btn-primary rounded-full mt-4 ">Withdraw Money</button>
+            </fieldset>
+        </div>
+    </section>
+    <script src="./Script/Masine.js"></script>
+    <script src="./Script/addMoney.js"></script>
     <script src="./Script/cashout.js"></script>
 </body>
 

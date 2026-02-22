@@ -1,22 +1,25 @@
 document.getElementById("cashout-btn").addEventListener("click", function () { 
     // console.log("Cashout Btn clicked");
     // 1. Get agent Number
-    const agentNumberInput=document.getElementById('input-cashout');
-    const agentNumber=agentNumberInput.value;
+    const agentNumber=getValueById('input-cashout');
+    // const agentNumberInput=document.getElementById('input-cashout');
+    // const agentNumber=agentNumberInput.value;
     // console.log(agentNumber);
     if(agentNumber.length !=11){
         alert("Invalid Agent Number");
         return;
     }
     // 2.Get the Amount
-    const amountNumberInput=document.getElementById('input-amount');
-    const amountNumber=amountNumberInput.value;
+    const amountNumber = getValueById("input-amount");
+    // const amountNumberInput=document.getElementById('input-amount');
+    // const amountNumber=amountNumberInput.value;
     // console.log(amountNumber);
 
     // 3.Get the pinnumber 
-    const pinnumberInput=document.getElementById("input-pin");
-    const pinNumber=pinnumberInput.value;
-    console.log(pinNumber);
+    const pinNumber = getValueById("input-pin");
+    // const pinnumberInput=document.getElementById("input-pin");
+    // const pinNumber=pinnumberInput.value;
+    // console.log(pinNumber);
     // 4.get the balance
     const balanceElement=document.getElementById("balance");
     const balance=balanceElement.innerText;
