@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind-DaisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <title>Piyoo</title>
+</head>
+
+<body class="min-h-screen max-w-md mx-auto bg-[#f1e3e3]">
+    <section class="border-b-2 border-gray-300 grid grid-cols-2 justify-between items-center py-3 px-6 sticky top-0 bg-amber-100 z-10">
+        <div class="flex gap-1">
+            <div class="w-[60px]"> <img src="./assets/logo.png" alt=""></div>
+            <div>
+                <h3 class="text-2xl font-bold">$<span id="balance">45000</span></h3>
+                <p class="text-neutral/50">Avilable Balance</p>
+            </div>
+        </div>
+        <div class="right text-right">
+            <a class="btn btn-soft" href="./index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+        </div>
+    </section>
+    <section class="w-11/12 mx-auto py-8 space-y-6">
+        <div class="space-y-3">
+            <h1 class="text-2xl font-bold">
+                Welcome to Pay<span class="text-[#7460FF]">oo</span>
+            </h1>
+            <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and
+            </p>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-1.png" alt="">
+                <p class="text-neutral/50">Add Money</p>
+            </button>
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-2.png" alt="">
+                <p class="text-neutral/50">Cashout</p>
+            </button>
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-3.png" alt="">
+                <p class="text-neutral/50">Transfer Money</p>
+            </button>
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-4.png" alt="">
+                <p class="text-neutral/50">Get Bonus</p>
+            </button>
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-5.png" alt="">
+                <p class="text-neutral/50">Pay Bill</p>
+            </button>
+            <button class="btn flex-col py-4 h-full">
+                <img src="./assets/opt-6.png" alt="">
+                <p class="text-neutral/50">Transaction</p>
+            </button>
+        </div>
+    </section>
+    <section id="Cashout-container"  class="w-11/12 mx-auto pb-8 space-y-6">
+         <div>
+            <h1 class="text-2xl font-bold text-neutral/70">Cash Out</h1>
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-4 mt-8 mx-auto">
+
+            <label class="label text-neutral font-bold">Agent Number</label>
+            <input type="text" id="input-cashout" maxlength="11" minlength="11" value="01968195158" class="input rounded-full w-full bg-[#F4F5F7] " placeholder="Enter 11 digit number" />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input type="text" id="input-amount" class="input rounded-full w-full bg-[#F4F5F7] " value="5453" placeholder="Enter amount to withdraw" />
+
+            <label class="label text-neutral font-bold mt-4">Pin Number</label>
+            <input type="password" id="input-pin" maxlength="4" minlength="4" class="input rounded-full w-full bg-[#F4F5F7]" placeholder="Enter 4 Digit pin" />
+
+            <button id="cashout-btn" class="btn btn-primary rounded-full mt-4 ">Withdraw Money</button>
+        </fieldset>
+    </div>
+    </section>
+    <script src="./Script/login.js"></script>
+    <script src="./Script/cashout.js"></script>
+</body>
+
+</html>
