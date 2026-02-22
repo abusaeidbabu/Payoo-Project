@@ -3,11 +3,15 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     // 1. Get agent Number
     const agentNumberInput=document.getElementById('input-cashout');
     const agentNumber=agentNumberInput.value;
-    console.log(agentNumber);
+    // console.log(agentNumber);
+    if(agentNumber.length !=11){
+        alert("Invalid Agent Number");
+        return;
+    }
     // 2.Get the Amount
     const amountNumberInput=document.getElementById('input-amount');
     const amountNumber=amountNumberInput.value;
-    console.log(amountNumber);
+    // console.log(amountNumber);
 
     // 3.Get the pinnumber 
     const pinnumberInput=document.getElementById("input-pin");
@@ -21,15 +25,19 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     //  5.validation balance 
 
     const newbalance= Number(balance)-Number(amountNumber);
-    console.log(newbalance);
-    if(newbalance<0){
+    // console.log(newbalance);
+    if(pinNumber=="2313"){
+         balanceElement.innerText=newbalance;
+        if(newbalance<0){
         alert("Insaficiant Balance");
         return;
     }
     else{
         alert("Cash Out Succesful");
     }
-    balanceElement.innerText=newbalance;
-
+    }
+   else{
+    alert("Invalid Pin Number")
+   }
 
 })
